@@ -71,10 +71,10 @@ if(formDiagnosis) {
                 mensajeIntro = "Hola Studio E360. Represento a una institución académica/investigación.";
                 break;
             case 'Corporativo':
-                mensajeIntro = "Hola Studio E360. Busco soluciones para entorno Corporativo/Minero.";
+                mensajeIntro = "Hola Studio E360. Busco soluciones para entorno Corporativo.";
                 break;
             case 'Creador':
-                mensajeIntro = "Hola. Estoy interesado en potenciar mi marca personal (Podcast/Legacy).";
+                mensajeIntro = "Hola. Estoy interesado en potenciar mi marca personal (Podcast o Legado).";
                 break;
         }
 
