@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio E360 | Sabiduría Audiovisual</title>
+    
+    <meta name="description" content="Ingeniería audiovisual y preservación del conocimiento. Streaming híbrido, producción científica y podcasts de autoridad.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'e360-dark': '#0F172A', /* Azul noche profundo */
+                        'e360-black': '#0a0a0a', /* Negro casi absoluto */
+                        'e360-gold': '#D4AF37', /* Dorado clásico suave */
+                        'e360-copper': '#B46845', /* Cobre humano/madera */
+                        'e360-silver': '#E2E8F0', /* Plata técnica */
+                    },
+                    fontFamily: {
+                        'serif': ['Merriweather', 'serif'], /* Clásico */
+                        'sans': ['Inter', 'sans-serif'],    /* Moderno */
+                        'mono': ['Space Mono', 'monospace'], /* Técnico */
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:ital,wght@0,300;0,700;1,400&family=Space+Mono&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Ocultar scrollbar para estética limpia */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0F172A; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        
+        /* Clase base para el efecto Spotlight */
+        .spotlight-overlay {
+            background: radial-gradient(
+                600px circle at var(--mouse-x) var(--mouse-y),
+                rgba(255,255,255,0.06),
+                transparent 40%
+            );
+        }
+    </style>
+</head>
+
+<body class="bg-e360-black text-e360-silver font-sans overflow-x-hidden relative">
+
+    <div id="spotlight" class="spotlight-overlay pointer-events-none fixed inset-0 z-50 transition-opacity duration-300"></div>
+
+    <nav class="fixed w-full z-40 top-0 left-0 py-6 px-8 flex justify-between items-center backdrop-blur-sm bg-e360-black/50 border-b border-white/5">
+        <div class="text-xl font-serif tracking-widest text-white">Studio<span class="text-e360-copper">E360°</span></div>
+        <div class="hidden md:flex space-x-8 text-sm font-mono opacity-80">
+            <a href="#trilogia" class="hover:text-e360-gold transition-colors">LA TRÍADA</a>
+            <a href="#podcast" class="hover:text-e360-gold transition-colors">LEGACY VOICE</a>
+            <a href="#tech" class="hover:text-e360-gold transition-colors">INGENIERÍA</a>
+        </div>
+        <a href="#contacto" class="border border-e360-copper text-e360-copper px-4 py-2 text-xs uppercase tracking-widest hover:bg-e360-copper hover:text-white transition-all duration-300">
+            Iniciar Proyecto
+        </a>
+    </nav>
+
+    <header class="relative h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden">
+        
+        <div class="absolute inset-0 z-0 opacity-30">
+            <div class="w-full h-full bg-[url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center grayscale blur-sm"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto space-y-6">
+            <p class="font-mono text-e360-gold text-xs tracking-[0.3em] uppercase animate-pulse">
+                System.Init: Preservando el legado
+            </p>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight">
+                SABIDURÍA <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-e360-silver to-gray-500">AUDIOVISUAL</span>
+            </h1>
+            <p class="font-light text-lg md:text-xl text-gray-400 max-w-2xl mx-auto pt-4">
+                Donde la profundidad del mensaje académico encuentra la precisión de la ingeniería digital.
+            </p>
+            
+            <div class="pt-10 flex flex-col items-center gap-4">
+                <div class="flex items-center gap-3 opacity-70 hover:opacity-100 transition-opacity cursor-help">
+                    <span class="text-xs uppercase tracking-wider text-gray-500">Avalado por</span>
+                    <div class="h-8 w-8 bg-gray-700 rounded-full border border-gray-500 flex items-center justify-center text-[10px] font-serif">RE</div>
+                    <span class="text-xs font-serif italic">Revista Epistecnología</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 animate-bounce">
+            <span class="text-[10px] font-mono uppercase">Explorar</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </header>
+
+    <section id="trilogia" class="py-24 bg-e360-dark border-t border-white/5 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="font-serif text-4xl text-center mb-16"><span class="italic text-e360-copper">Nuestra</span> Tríada</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+                <div class="h-96 border border-white/10 p-8 flex flex-col justify-end hover:bg-white/5 transition-colors group">
+                    <div class="text-e360-copper mb-4 text-4xl group-hover:-translate-y-2 transition-transform duration-500">✦</div>
+                    <h3 class="text-2xl font-serif mb-2">Desarrollo Humano</h3>
+                    <p class="text-sm text-gray-400 font-light">Psicología del orador y liderazgo escénico.</p>
+                </div>
+                <div class="h-96 border-l border-r border-t border-b md:border-t-0 border-white/10 p-8 flex flex-col justify-end hover:bg-white/5 transition-colors group">
+                    <div class="text-blue-400 mb-4 text-4xl group-hover:-translate-y-2 transition-transform duration-500">❖</div>
+                    <h3 class="text-2xl font-serif mb-2">Divulgación Científica</h3>
+                    <p class="text-sm text-gray-400 font-light">Rigor académico traducido a narrativa visual.</p>
+                </div>
+                <div class="h-96 border border-white/10 p-8 flex flex-col justify-end hover:bg-white/5 transition-colors group">
+                    <div class="text-red-500 mb-4 text-4xl group-hover:-translate-y-2 transition-transform duration-500">◉</div>
+                    <h3 class="text-2xl font-serif mb-2">Producción Técnica</h3>
+                    <p class="text-sm text-gray-400 font-light">Cinematografía aplicada y streaming.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="podcast" class="min-h-screen flex items-center bg-black relative overflow-hidden">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="z-10">
+                <span class="text-e360-gold font-mono text-xs uppercase">Legacy Voice</span>
+                <h2 class="text-5xl md:text-6xl font-serif mt-2 mb-6">Tu Voz,<br>Tu Legado.</h2>
+                <p class="text-gray-400 mb-8 max-w-md">
+                    No es solo contenido, es autoridad. Elige tu escenario: la comodidad de tu despacho o la inmersión de nuestro estudio.
+                </p>
+                
+                <div class="flex gap-4">
+                    <button class="px-6 py-3 border border-white/20 hover:border-e360-copper hover:text-e360-copper transition-all">
+                        In-House Studio
+                    </button>
+                    <button class="px-6 py-3 bg-white/5 border border-transparent hover:bg-white/10 transition-all">
+                        Studio E360
+                    </button>
+                </div>
+            </div>
+            
+            <div class="h-[500px] bg-gradient-to-tr from-gray-900 to-gray-800 rounded-sm border border-white/5 relative">
+                <div class="absolute inset-0 flex items-center justify-center opacity-30 text-xs font-mono">
+                    [RENDER 3D DE MICRÓFONO RE10 DE ELECTROVOICE AQUÍ]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech" class="py-24 bg-e360-dark border-t border-white/10">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-mono text-2xl mb-12 text-gray-400">/ ARQUITECTURA_DE_TRANSMISIÓN</h2>
+            <div class="flex flex-wrap justify-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
+                <h3 class="text-xl font-bold tracking-tighter">Blackmagic Design</h3>
+                <h3 class="text-xl font-bold tracking-tighter">YoloLiv</h3>
+                <h3 class="text-xl font-bold tracking-tighter">SONY Cinema Line</h3>
+                <h3 class="text-xl font-bold tracking-tighter">Sennheiser</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-24 bg-gradient-to-b from-black to-e360-dark text-center">
+        <div class="max-w-2xl mx-auto px-6">
+            <h2 class="text-3xl font-serif mb-6">¿Listo para elevar el estándar?</h2>
+            <p class="text-gray-400 mb-10">Realiza un diagnóstico rápido o inicia la conversación directa.</p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <button class="bg-e360-copper text-white px-8 py-4 font-bold tracking-widest hover:bg-orange-700 transition-colors shadow-lg shadow-orange-900/20">
+                    DIAGNÓSTICO (TEST)
+                </button>
+                <button class="border border-white/20 px-8 py-4 font-bold tracking-widest hover:bg-white hover:text-black transition-colors">
+                    WHATSAPP DIRECTO
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 text-center border-t border-white/5 text-xs text-gray-600 font-mono">
+        &copy; 2025 Studio Enfoque 360. Todos los derechos reservados.
+    </footer>
+
+    <script>
+        // Aquí irá la lógica del Spotlight que programaremos a continuación
+        const spotlight = document.getElementById('spotlight');
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+            spotlight.style.setProperty('--mouse-x', x + 'px');
+            spotlight.style.setProperty('--mouse-y', y + 'px');
+        });
+    </script>
+</body>
+</html>
