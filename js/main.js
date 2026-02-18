@@ -4,7 +4,7 @@
  */
 
 const APP_CONFIG = {
-    whatsappNumber: "51999999999", // CAMBIA ESTO POR TU NÚMERO REAL (con código de país 51)
+    whatsappNumber: "51993118573", // CAMBIA ESTO POR TU NÚMERO REAL (con código de país 51)
     animationDuration: 300
 };
 
