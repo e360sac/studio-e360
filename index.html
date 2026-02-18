@@ -60,7 +60,7 @@
             <a href="#podcast" class="hover:text-e360-gold transition-colors">LEGACY VOICE</a>
             <a href="#tech" class="hover:text-e360-gold transition-colors">INGENIERÍA</a>
         </div>
-        <a href="#contacto" class="border border-e360-copper text-e360-copper px-4 py-2 text-xs uppercase tracking-widest hover:bg-e360-copper hover:text-white transition-all duration-300">
+        <a href="#contacto" class="trigger-diagnosis border border-e360-copper text-e360-copper px-4 py-2 text-xs uppercase tracking-widest hover:bg-e360-copper hover:text-white transition-all duration-300">
             Iniciar Proyecto
         </a>
     </nav>
@@ -165,7 +165,7 @@
             <p class="text-gray-400 mb-10">Realiza un diagnóstico rápido o inicia la conversación directa.</p>
             
             <div class="flex flex-col md:flex-row justify-center gap-4">
-                <button class="bg-e360-copper text-white px-8 py-4 font-bold tracking-widest hover:bg-orange-700 transition-colors shadow-lg shadow-orange-900/20">
+                <button class="trigger-diagnosis bg-e360-copper text-white px-8 py-4 font-bold tracking-widest hover:bg-orange-700 transition-colors shadow-lg shadow-orange-900/20">
                     DIAGNÓSTICO (TEST)
                 </button>
                 <button class="border border-white/20 px-8 py-4 font-bold tracking-widest hover:bg-white hover:text-black transition-colors">
@@ -174,6 +174,59 @@
             </div>
         </div>
     </section>
+
+    <div id="modal-diagnostico" class="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 backdrop-blur-sm opacity-0 hidden transition-opacity duration-300">
+        <div class="bg-gray-900 border border-white/10 p-8 rounded-none max-w-md w-full shadow-2xl relative mx-4">
+            
+            <button id="btn-close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors">
+                ✕
+            </button>
+
+            <h3 class="font-serif text-2xl text-white mb-2">Diagnóstico Inicial</h3>
+            <p class="text-sm text-gray-400 mb-6 font-mono">Ayúdanos a calibrar la solución antes de hablar.</p>
+
+            <form id="form-diagnosis" class="space-y-6">
+                
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-e360-gold mb-2">Tu Nombre / Cargo</label>
+                    <input type="text" id="input-nombre" required class="w-full bg-black/50 border border-white/20 p-3 text-white focus:border-e360-copper focus:outline-none transition-colors" placeholder="Ej: Dr. Roberto, Director de Investigación">
+                </div>
+
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-e360-gold mb-3">Tu Perfil Operativo</label>
+                    <div class="grid grid-cols-3 gap-2">
+                        <label class="cursor-pointer">
+                            <input type="radio" name="perfil" value="Corporativo" class="peer sr-only" required>
+                            <div class="border border-white/20 p-2 text-center text-xs text-gray-400 peer-checked:bg-e360-copper peer-checked:text-white peer-checked:border-e360-copper transition-all hover:bg-white/5">
+                                🏢 Corp/Mina
+                            </div>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="perfil" value="Academico" class="peer sr-only">
+                            <div class="border border-white/20 p-2 text-center text-xs text-gray-400 peer-checked:bg-blue-900 peer-checked:text-white peer-checked:border-blue-500 transition-all hover:bg-white/5">
+                                🎓 Académico
+                            </div>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="perfil" value="Creador" class="peer sr-only">
+                            <div class="border border-white/20 p-2 text-center text-xs text-gray-400 peer-checked:bg-purple-900 peer-checked:text-white peer-checked:border-purple-500 transition-all hover:bg-white/5">
+                                🎙 Legacy
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-e360-gold mb-2">Objetivo Principal</label>
+                    <textarea id="input-necesidad" required rows="3" class="w-full bg-black/50 border border-white/20 p-3 text-white focus:border-e360-copper focus:outline-none transition-colors" placeholder="Ej: Necesito transmitir un simposio híbrido desde Arequipa..."></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-gradient-to-r from-e360-copper to-orange-800 text-white font-bold py-4 tracking-widest hover:brightness-110 transition-all shadow-lg shadow-orange-900/30">
+                    INICIAR CONVERSACIÓN
+                </button>
+            </form>
+        </div>
+    </div>
 
     <footer class="py-8 text-center border-t border-white/5 text-xs text-gray-600 font-mono">
         &copy; 2025 Studio Enfoque 360. Todos los derechos reservados.
@@ -189,5 +242,6 @@
             spotlight.style.setProperty('--mouse-y', y + 'px');
         });
     </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
